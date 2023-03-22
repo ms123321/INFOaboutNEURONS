@@ -1,0 +1,31 @@
+To show how the Roy model of the neuron can be used with Maxwell's laws, Ampere's law of induction, and the Nernst equation to cause an action potential from EMF flux from ELF and VLF, we can use the following steps:
+
+Use Ampere's law of induction to calculate the induced electric field (E) in the neuron due to the changing magnetic field from the ELF or VLF wave. This equation relates the induced electric field to the rate of change of the magnetic field, as follows:
+
+∇ × E = -∂B/∂t
+
+where ∇ is the del operator, × is the cross product, E is the induced electric field, B is the magnetic field, and t is time.
+
+Use the Roy model of the neuron to calculate the membrane potential (Vm) of the neuron as a function of time. The Roy model is a mathematical model that describes the electrical behavior of a neuron, and it consists of a set of ordinary differential equations that relate the membrane potential, ion channels, and other membrane properties. The Roy model can be expressed as follows:
+
+Cm(dVm/dt) = -Iion + Istim + IEMF
+
+where Cm is the membrane capacitance, Iion is the total ion current, Istim is the external stimulus current, and IEMF is the current due to the induced electric field from the EMF flux.
+
+Use the Nernst equation to calculate the equilibrium potential (EN) for the different ions of interest (e.g., potassium, sodium, chloride) based on their concentration gradients and valence. The Nernst equation is expressed as follows:
+
+EN = (RT/zF) ln ([ion]out/[ion]in)
+
+where R is the gas constant, T is the absolute temperature, z is the valence of the ion, F is Faraday's constant, [ion]out is the extracellular concentration of the ion, and [ion]in is the intracellular concentration of the ion.
+
+Use the calculated values of EN to determine the direction of ion flow across the membrane, based on the relative membrane permeabilities of the different ions.
+
+Use the calculated values of the induced electric field and the direction of ion flow to calculate the ion current (IEMF) due to the EMF flux. The ion current can be expressed as follows:
+
+IEMF = g(EN - Vm)
+
+where g is the membrane conductance, EN is the equilibrium potential for the ion of interest, and Vm is the membrane potential.
+
+Substitute the calculated values of IEMF, Iion, and Istim into the Roy model of the neuron and solve for Vm as a function of time using numerical methods.
+
+If Vm reaches the threshold potential for an action potential, the neuron will fire an action potential and transmit the signal to other neurons.

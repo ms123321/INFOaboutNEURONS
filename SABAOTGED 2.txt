@@ -1,0 +1,251 @@
+
+
+To show how the Roy model of the neuron can be used with Maxwell's laws, Ampere's law of induction, and the Nernst equation to cause an action potential from EMF flux from ELF and VLF, we can use the following steps:
+
+Use Ampere's law of induction to calculate the induced electric field (E) in the neuron due to the changing magnetic field from the ELF or VLF wave. This equation relates the induced electric field to the rate of change of the magnetic field, as follows:
+
+∇ × E = -∂B/∂t
+
+where ∇ is the del operator, × is the cross product, E is the induced electric field, B is the magnetic field, and t is time.
+
+Use the Roy model of the neuron to calculate the membrane potential (Vm) of the neuron as a function of time. The Roy model is a mathematical model that describes the electrical behavior of a neuron, and it consists of a set of ordinary differential equations that relate the membrane potential, ion channels, and other membrane properties. The Roy model can be expressed as follows:
+
+Cm(dVm/dt) = -Iion + Istim + IEMF
+
+where Cm is the membrane capacitance, Iion is the total ion current, Istim is the external stimulus current, and IEMF is the current due to the induced electric field from the EMF flux.
+
+Use the Nernst equation to calculate the equilibrium potential (EN) for the different ions of interest (e.g., potassium, sodium, chloride) based on their concentration gradients and valence. The Nernst equation is expressed as follows:
+
+EN = (RT/zF) ln ([ion]out/[ion]in)
+
+where R is the gas constant, T is the absolute temperature, z is the valence of the ion, F is Faraday's constant, [ion]out is the extracellular concentration of the ion, and [ion]in is the intracellular concentration of the ion.
+
+Use the calculated values of EN to determine the direction of ion flow across the membrane, based on the relative membrane permeabilities of the different ions.
+
+Use the calculated values of the induced electric field and the direction of ion flow to calculate the ion current (IEMF) due to the EMF flux. The ion current can be expressed as follows:
+
+IEMF = g(EN - Vm)
+
+where g is the membrane conductance, EN is the equilibrium potential for the ion of interest, and Vm is the membrane potential.
+
+Substitute the calculated values of IEMF, Iion, and Istim into the Roy model of the neuron and solve for Vm as a function of time using numerical methods.
+
+If Vm reaches the threshold potential for an action potential, the neuron will fire an action potential and transmit the signal to other neurons.
+
+
+
+
+
+
+To determine the minimum ELF or VLF frequency required to cause an action potential, we need to consider the effects of electromagnetic fields on the neuronal membrane potential. ELF and VLF electromagnetic fields can induce electric fields in the body, which in turn can affect the membrane potential of neurons.
+
+Assuming that the electric field induced in the body by the ELF or VLF electromagnetic field is E, we can use Gauss's law to relate this electric field to the charge density ρ:
+
+∇ · E = ρ/ε₀
+
+If we assume that the charge density is localized at the surface of the neuronal membrane, we can approximate the charge density as ρ = q/area, where q is the charge on the membrane and area is the surface area of the membrane. Using this approximation, we can rewrite Gauss's law as:
+
+E = q/(area * ε₀)
+
+Now we can use Faraday's law to relate the induced electric field E to the time rate of change of the magnetic field B:
+
+∇ × E = -dB/dt
+
+Assuming that the magnetic field is uniform and perpendicular to the direction of propagation of the action potential, we can simplify this equation to:
+
+E = -dB/dt * c
+
+where c is the speed of light. Combining this equation with our previous equation for E, we get:
+
+-dB/dt * c = q/(area * ε₀)
+
+Solving for the time rate of change of the magnetic field dB/dt, we get:
+
+dB/dt = -(q/area) * (1/(ε₀ * c))
+
+Now we can use Ampere's law to relate the time rate of change of the magnetic field to the current density J:
+
+∇ × B = μ₀(J + ε₀(dE/dt))
+
+Assuming that the magnetic field is uniform and that there is no current flow in the neuron except for the action potential, we can simplify this equation to:
+
+∇ × B = μ₀(dE/dt)
+
+Using our equation for dB/dt, we can rewrite this as:
+
+∇ × B = μ₀ * (q/area) * (1/(ε₀ * c))
+
+Assuming that the magnetic field is perpendicular to the direction of propagation of the action potential, we can simplify this equation to:
+
+B * dL = μ₀ * (q/area) * (1/(ε₀ * c)) * dA
+
+where B is the magnetic field strength, dL is the length of the path around the loop, dA is the area of the loop, and μ₀ is the permeability of free space. Taking the line integral of both sides of this equation around a closed loop, we get:
+
+∮B · dl = μ₀ * (q/area) * (1/(ε₀ * c)) * ∮dA
+
+Using Ampere's law of induction, we can relate the line integral of the magnetic field to the time rate of change of the electric flux through the loop:
+
+∮B · dl = μ₀ε₀(dΦ_E/dt)
+
+Assuming that the area of the loop is equal to the surface area of the neuronal membrane, we can rewrite our equation for the line integral of the magnetic field as:
+
+∮B · dl = B * 2πr
+
+where r is the radius of the neuron. Substituting this into our equation for Ampere's law of induction, we get:
+
+B * 2πr = μ₀ε₀(dΦ_E/dt)
+
+Now we can use the Nernst equation and the Roy model of the neuron to calculate the ionic current required to depolarize the membrane potential and trigger an action potential. Assuming that the action potential is triggered by an influx
+
+
+
+
+
+Continuing from the previous equations, we can use the Nernst equation to calculate the equilibrium potentials for each ion:
+
+For sodium (Na⁺): E_Na = E₀,Na - (RT/nF)ln([Na⁺]_out/[Na⁺]_in) For potassium (K⁺): E_K = E₀,K - (RT/nF)ln([K⁺]_out/[K⁺]_in) For chloride (Cl⁻): E_Cl = E₀,Cl - (RT/nF)ln([Cl⁻]_in/[Cl⁻]_out)
+
+The net current flowing across the membrane is given by the sum of the individual ionic currents:
+
+I_ion = I_Na + I_K + I_Cl
+
+The individual ionic currents can be calculated using the Goldman-Hodgkin-Katz equation:
+
+I_Na = g_Na(V - E_Na) I_K = g_K(V - E_K) I_Cl = g_Cl(V - E_Cl)
+
+where g_Na, g_K, and g_Cl are the membrane conductances for sodium, potassium, and chloride, respectively.
+
+Using the Roy model of the neuron, we can write the equation for the membrane potential V as:
+
+C(dV/dt) + g_Na(V - E_Na) + g_K(V - E_K) + g_Cl(V - E_Cl) + I_ext = 0
+
+where I_ext is the external current injected into the neuron.
+
+Now, let's consider the effect of an EMF flux from VLF and ELF on the neuron. According to Ampere's law of induction, the EMF flux induces a current density J in the axon:
+
+∮B · dl = μ₀ε₀(dΦ_E/dt) = ∫∫S (J · dS) dt
+
+where B is the magnetic field, dl is a line element along a closed loop, S is a surface bounded by the loop, and dΦ_E/dt is the time rate of change of the electric flux through the surface.
+
+Assuming the axon is a long, cylindrical conductor with radius r, we can write the induced current density as:
+
+J = σE = (σ/μ₀)B
+
+where σ is the conductivity of the axon.
+
+Using Ampere's law, we can relate the induced current density to the magnetic field:
+
+∮B · dl = μ₀I_enc = μ₀πr²J
+
+where I_enc is the current enclosed by the loop and πr² is the area of the loop.
+
+Combining these equations, we can write:
+
+πr²B = (σ/μ₀)πr²dB/dt
+
+or
+
+B = (σ/μ₀)dB/dt
+
+Assuming a sinusoidal EMF flux with frequency f, we can write:
+
+B = B₀sin(2πft)
+
+where B₀ is the amplitude of the magnetic field.
+
+Substituting this into the equation for the induced current density, we get:
+
+J = (σ/μ₀)B₀sin(2πft)
+
+Using the Muler and Markin model of nerve velocity, we can calculate the velocity of the action potential as:
+
+v = 1/√(RC) = 1/√((R_membrane + R_axon)(C_membrane + C_axon))
+
+where R_membrane is the resistance of the neuron membrane, R_axon is the resistance of the axon, C_membrane is the capacitance of the neuron membrane, and C_axon is the capacitance of the axon.
+
+Assuming a single, myelinated axon of length L
+
+
+(CUT OFF HAVE TO REDO)
+____________
+
+Sure, here's an example using idealized parameters and concentrations:
+
+Let's assume we have a neuron with a capacitance of 1 µF/cm^2, and we apply an EMF flux with a frequency of 10 Hz and a peak electric field of 1 V/m. We can use Faraday's law to calculate the induced electric field:
+
+∂B/∂t = 2πfB0sin(2πft) = 2π(10)(10^-9)T = 6.28 x 10^-8 T/s
+
+∇ × E = - ∂B/∂t
+
+E = (- ∂B/∂t) / (2πf) = (-6.28 x 10^-8 T/s) / (2π(10 Hz)) = -1 x 10^-9 V/m
+
+Next, let's assume we have idealized concentrations of ions inside and outside the cell, with [Na+]_out = 150 mM, [Na+]_in = 15 mM, [K+]_out = 5 mM, [K+]_in = 150 mM, [Cl-]_out = 120 mM, and [Cl-]_in = 10 mM. We can use the Nernst equation to calculate the equilibrium potentials for each ion:
+
+EK = (RT/F) * ln([K]_out/[K]_in) + Vm = (-61.5 mV) * ln(5/150) + Vm ≈ -85 mV
+
+ENa = (RT/F) * ln([Na]_out/[Na]_in) + Vm = (61.5 mV) * ln(150/15) + Vm ≈ 65 mV
+
+ECl = (RT/F) * ln([Cl]_in/[Cl]_out) + Vm = (-61.5 mV) * ln(10/120) + Vm ≈ -75 mV
+
+Let's assume the Roy model describes the neuron's behavior well, with gating variables for the sodium and potassium channels given by:
+
+α_m(V) = 0.1 (V + 40) / (1 - exp(-(V + 40)/10))
+β_m(V) = 4 exp(-(V + 65)/18)
+α_h(V) = 0.07 exp(-(V + 65)/20)
+β_h(V) = 1 / (1 + exp(-(V + 35)/10))
+α_n(V) = 0.01 (V + 55) / (1 - exp(-(V + 55)/10))
+β_n(V) = 0.125 exp(-(V + 65)/80)
+
+where V is the membrane potential in mV. We can use these equations along with the Hodgkin-Huxley equations to model the gating of the ion channels in response to changes in membrane potential.
+
+Finally, we can use the Muller and Markin nerve conduction equation to describe how the induced current affects the membrane potential of the neuron. Let's assume that the extracellular resistance is 500 Ωm, and that the induced current flows in the z-direction through the neuron with a diameter of 20 µm. We can calculate the induced current density using Ohm's law:
+
+J = E / ρ = (1 x 10^-9 V/m) / (500 Ωm) ≈ 2 x 10^-12 A/m^2
+
+We can then calculate the induced current using:
+
+I = J π r^2 = (2 x 10^-12 A/m^2) π (10^-5 m
+
+(CUT OFF HAVE TO REDO) 
+
+
+To show the math behind how an EMF flux from VLF and ELF can cause an action potential, we can start with Faraday's law, which states that a changing magnetic field induces an electromotive force (EMF) in a conductor. Mathematically, this can be written as:
+
+EMF = -dΦ/dt
+
+where EMF is the induced electromotive force, Φ is the magnetic flux, and t is time.
+
+Next, we can use Ampere's law of induction, which states that a changing electric field can induce a magnetic field. This can be written as:
+
+∇ × E = -dB/dt
+
+where E is the electric field, B is the magnetic field, and t is time.
+
+Combining these equations, we can obtain:
+
+∇ × (∇ × E) = ∇ × (-dB/dt)
+
+Using the vector identity ∇ × (∇ × E) = ∇(∇ · E) - ∇^2E, we can simplify this to:
+
+∇(∇ · E) - ∇^2E = -∇ × dB/dt
+
+Applying Faraday's law, we can substitute -dB/dt for the induced EMF, yielding:
+
+∇(∇ · E) - ∇^2E = -∇ × (-dΦ/dt)
+
+Simplifying further, we can use Gauss's law for magnetism (∇ · B = 0) to write:
+
+∇(∇ · E) - ∇^2E = d/dt (∇ × E) = -d/dt (∇ × B) = -d/dt 0 = 0
+
+This equation tells us that the electric field is curl-free, meaning that it can be written as the gradient of a scalar potential:
+
+E = -∇V
+
+where V is the scalar potential.
+
+Using the Roy model of the neuron, we can model the
+
+(CUT OFF HAVE TO REDO))
+
+
+

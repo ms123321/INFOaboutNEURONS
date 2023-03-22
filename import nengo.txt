@@ -1,0 +1,113 @@
+import nengo
+
+# Define the neuron model
+def lif_neuron_model(t, x):
+    voltage = x[0]
+    current = x[1]
+    resistance = 1.0
+    capacitance = 1.0
+    threshold = 1.0
+    reset_voltage = 0.0
+    dt = 0.001
+
+    # Update the voltage using the LIF equation
+    voltage += dt * (-(voltage - current * resistance) / capacitance)
+
+    # Check if the voltage has crossed the threshold
+    if voltage >= threshold:
+        voltage = reset_voltage
+
+    return voltage
+
+# Create a Nengo model with a single neuron
+model = nengo.Network()
+with model:
+    neuron = nengo.Node(size_in=2)
+    output = nengo.Node(size_in=1)
+    nengo.Connection(neuron, output, function=lif_neuron_model)
+
+# Run the model
+with nengo.Simulator(model) as sim:
+    sim.run(1.0)
+
+On Tue, Mar 21, 2023 at 2:44 PM Martin Seidel <martinseidel75@gmail.com> wrote:
+import nengo
+
+# Create the Nengo model
+model = nengo.Network()
+
+with model:
+    # Define the input and output nodes
+    input_node = nengo.Node([0])
+    output_node = nengo.Node(size_in=1)
+
+    # Define the ensembles of neurons representing different brain regions
+    prefrontal_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)
+    dmn_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)
+    tpj_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)
+    insula_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)
+    acc_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)
+    stg_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)
+
+    # Define the connections between the input and brain regions
+    nengo.Connection(input_node, prefrontal_neurons)
+    nengo.Connection(input_node, dmn_neurons)
+    nengo.Connection(input_node, tpj_neurons)
+    nengo.Connection(input_node, insula_neurons)
+    nengo.Connection(input_node, acc_neurons)
+    nengo.Connection(input_node, stg_neurons)
+
+    # Define the connections between the brain regions
+    nengo.Connection(prefrontal_neurons, dmn_neurons, function=lambda x: x[0] if x[0] > 0 else 0)
+    nengo.Connection(dmn_neurons, prefrontal_neurons, function=lambda x: x[0] if x[0] > 0 else 0)
+    nengo.Connection(tpj_neurons, prefrontal_neurons, function=lambda x: x[0] if x[0] > 0 else 0)
+    nengo.Connection(prefrontal_neurons, tpj_neurons, function=lambda x: x[0] if x[0] > 0 else 0)
+    nengo.Connection(insula_neurons, prefrontal_neurons, function=lambda x: x[0] if x[0] > 0 else 0)
+    nengo.Connection(prefrontal_neurons, insula_neurons, function=lambda x: x[0] if x[0] > 0 else 0)
+    nengo.Connection(acc_neurons, prefrontal_neurons, function=lambda x: x[0] if x[0] > 0 else 0)
+    nengo.Connection(prefrontal_neurons, acc_neurons, function=lambda x: x[0] if x[0] > 0 else 0)
+    nengo.Connection(stg_neurons, prefrontal_neurons, function=lambda x: x[0] if x[0] > 0 else 0)
+    nengo.Connection(prefrontal_neurons, stg_neurons, function=lambda x: x[0] if x[0] > 0 else 0)
+
+    # Define the connection between the brain regions and the output
+    nengo.Connection(prefrontal_neurons, output_node, function=lambda x: x[0] if x[0] > 0 else 0)
+
+# Run the model
+with nengo.Simulator(model) as sim:
+    sim.run(1.0)
+
+Add the broca and wernick area - add the gui too
+
+
+
+import nengo
+
+# Define the neuron model
+def lif_neuron_model(t, x):
+    voltage = x[0]
+    current = x[1]
+    resistance = 1.0
+    capacitance = 1.0
+    threshold = 1.0
+    reset_voltage = 0.0
+    dt = 0.001
+
+    # Update the voltage using the LIF equation
+    voltage += dt * (-(voltage - current * resistance) / capacitance)
+
+    # Check if the voltage has crossed the threshold
+    if voltage >= threshold:
+        voltage = reset_voltage
+
+    return voltage
+
+# Create a Nengo model with a single neuron
+model = nengo.Network()
+with model:
+    neuron = nengo.Node(size_in=2)
+    output = nengo.Node(size_in=1)
+    nengo.Connection(neuron, output, function=lif_neuron_model)
+
+# Run the model
+with nengo.Simulator(model) as sim:
+    sim.run(1.0)

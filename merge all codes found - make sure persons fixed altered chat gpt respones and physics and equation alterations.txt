@@ -1,0 +1,197 @@
+import pygame
+import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
+
+# Define the body model
+class Body:
+    def __init__(self, height, weight):
+        self.height = height
+        self.weight = weight
+        self.head = np.array([0, 0, height/2])
+        self.neck = np.array([0, 0, height*0.45])
+        self.shoulders = np.array([0.2*weight, 0, height*0.35])
+        self.hips = np.array([0.2*weight, 0, -height*0.35])
+        self.feet = np.array([0, 0, -height/2])
+        self.upper_arm = np.array([0.2*weight, 0, height*0.25])
+        self.forearm = np.array([0.1*weight, 0, height*0.15])
+        self.hand = np.array([0, 0, height*0.1])
+        self.upper_leg = np.array([0.3*weight, 0, -height*0.25])
+        self.lower_leg = np.array([0.2*weight, 0, -height*0.2])
+        self.foot = np.array([0, 0, -height*0.1])
+
+    def get_points(self):
+        return np.array([self.head, self.neck, self.shoulders, self.hips, self.feet,
+                         self.shoulders + self.upper_arm, self.shoulders + self.upper_arm + self.forearm,
+                         self.shoulders + self.upper_arm + self.forearm + self.hand,
+                         self.hips + self.upper_leg, self.hips + self.upper_leg + self.lower_leg,
+                         self.hips + self.upper_leg + self.lower_leg + self.foot])
+
+# Define the movement sequence
+class Movement:
+    def __init__(self, name, sequence):
+        self.name = name
+        self.sequence = sequence
+
+# Define the muscle model
+class Muscle:
+    def __init__(self, name, origin, insertion, max_force):
+        self.name = name
+        self.origin = origin
+        self.insertion = insertion
+        self.max_force = max_force
+
+
+_____________________
+
+import pygame
+import numpy as np
+from body import Body, Muscle, Movement, Simulation
+
+# Define colors
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+
+# Initialize Pygame
+pygame.init()
+size = (800, 600)
+screen = pygame.display.set_mode(size)
+pygame.display.set_caption("Skeleton Simulation")
+
+# Define the body, movements, and muscles
+body = Body(1.8, 70)
+movements = [Movement("standing", np.zeros((100, 3)))]
+muscles = [
+    Muscle("quadriceps", body.hips, body.feet, 1000),
+    Muscle("hamstrings", body.feet, body.hips, 500),
+    Muscle("deltoids", body.shoulders, body.hips, 500),
+    Muscle("trapezius", body.head, body.shoulders, 200),
+    Muscle("biceps", body.shoulders, body.hand, 200),
+    Muscle("triceps", body.hand, body.shoulders, 200),
+]
+
+# Define the simulation
+simulation = Simulation(body, movements, muscles)
+
+# Run the simulation
+simulation.run()
+
+# Define the skeleton and muscles as Pygame surfaces
+skeleton = pygame.Surface((200, 400))
+skeleton.set_colorkey(WHITE)
+skeleton.fill(WHITE)
+pygame.draw.circle(skeleton, BLACK, (100, 40), 20)
+pygame.draw.line(skeleton, BLACK, (100, 60), (100, 160), 10)
+pygame.draw.line(skeleton, BLACK, (100, 160), (70, 260), 10)
+pygame.draw.line(skeleton, BLACK, (100, 160), (130, 260), 10)
+pygame.draw.line(skeleton, BLACK, (70, 260), (70, 360), 10)
+pygame.draw.line(skeleton, BLACK, (130, 260), (130, 360), 10)
+muscle_surfaces = []
+for muscle in muscles:
+    muscle_surface = pygame.Surface((10, 10))
+    muscle_surface.set_colorkey(WHITE)
+    muscle_surface.fill(WHITE)
+    pygame.draw.circle(muscle_surface, RED, (5, 5), 5)
+    muscle_surfaces.append(muscle_surface)
+
+# Define the Pygame clock
+clock = pygame.time.Clock()
+
+# Main loop
+done = False
+while not done:
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+
+    # Draw the skeleton and muscles on
+
+_____
+
+import pygame
+import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
+
+# Define the body model
+class Body:
+    def __init__(self, height, weight):
+        self.height = height
+        self.weight = weight
+        self.head = np.array([0, 0, height/2])
+        self.neck = np.array([0, 0, height*0.45])
+        self.shoulders = np.array([0.2*weight, 0, height*0.35])
+        self.hips = np.array([0.2*weight, 0, -height*0.35])
+        self.feet = np.array([0, 0, -height/2])
+        self.upper_arm = np.array([0.2*weight, 0, height*0.25])
+        self.forearm = np.array([0.1*weight, 0, height*0.15])
+        self.hand = np.array([0, 0, height*0.1])
+        self.upper_leg = np.array([0.3*weight, 0, -height*0.25])
+        self.lower_leg = np.array([0.2*weight, 0, -height*0.2])
+        self.foot = np.array([0, 0, -height*0.1])
+
+# Define the movement sequence
+class Movement:
+    def __init__(self, name, sequence):
+        self.name = name
+        self.sequence = sequence
+
+# Define the muscle model
+class Muscle:
+    def __init__(self, name, origin, insertion, max_force):
+        self.name = name
+        self.origin = origin
+        self.insertion = insertion
+        self.max_force = max_force
+
+    def contraction(self, activation):
+        return self.max_force * activation
+
+# Define the simulation environment
+class Simulation:
+    def __init__(self, body, movements, muscles):
+        self.body = body
+        self.movements = movements
+        self.muscles = muscles
+
+    def run(self):
+        # Define simulation parameters
+        dt = 0.01
+        t = np.arange(0, 10, dt)
+        activations = np.zeros(len(self.muscles))
+        forces = np.zeros(len(self.muscles))
+        positions = np.zeros((len(t), 3))
+
+        # Initialize Pygame
+        pygame.init()
+        pygame.display.set_caption('Muscle Simulation')
+        clock = pygame.time.Clock()
+
+        # Set up screen
+        screen_width, screen_height = 800, 600
+        screen = pygame.display.set_mode((screen_width, screen_height))
+        font = pygame.font.Font(None, 30)
+
+        # Define colors
+        black = (0, 0, 0)
+        white = (255, 255, 255)
+        red = (255, 0, 0)
+
+        # Define skeleton points
+        skeleton_points = [
+            ('head', self.body.head),
+            ('neck', self.body.neck),
+            ('shoulders', self.body.shoulders),
+            ('hips', self.body.hips),
+            ('feet', self.body.feet),
+            ('upper_arm', self.body.upper_arm),
+            ('forearm', self.body.forearm),
+            ('hand', self.body.hand),
+            ('upper_leg', self.body.upper_leg),
+            ('lower_leg', self.body.lower_leg),
+            ('foot', self.body.foot)
+        ]
+
+        # Define muscle lines
+        muscle_lines = [
+            ('trapezius', self.body

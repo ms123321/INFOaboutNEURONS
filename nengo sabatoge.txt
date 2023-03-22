@@ -1,0 +1,19 @@
+import nengo
+from nengo_gui.ipython import IPythonViz
+
+# Create the Nengo model
+model = nengo.Network()
+
+with model:
+    # Define the input and output nodes
+    input_node = nengo.Node([0])
+    output_node = nengo.Node(size_in=1)
+
+    # Define the ensembles of neurons representing different brain regions
+    prefrontal_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)
+    dmn_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)
+    tpj_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)
+    insula_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)
+    acc_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)
+    stg_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)
+    broca_neurons = nengo.Ensemble(n_neurons=100, dimensions=1)

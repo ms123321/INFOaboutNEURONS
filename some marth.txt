@@ -1,0 +1,143 @@
+Sure, here's an example of the math involved in modeling the interaction between the applied fields and the induced field:
+
+Let's assume that the applied VLF and ELF fields can be modeled as sinusoidal waves with frequencies of 10 kHz and 30 Hz, respectively, and a magnetic field strength of 100 nT. Let's also assume that the induced magnetic field can be modeled as a sinusoidal wave with a frequency of 2 Hz and a magnetic field strength of 1 pT.
+
+Using Maxwell's equations, we can relate the electric field and magnetic field to each other and to the electrical conductivity of the brain tissue. Specifically, we can use the following equation:
+
+∇ × E = -∂B/∂t
+
+where E is the electric field, B is the magnetic field, and ∂/∂t represents the partial derivative with respect to time. This equation says that a changing magnetic field induces an electric field, and vice versa.
+
+Assuming that the brain tissue has a conductivity of 0.3 S/m, we can use the constitutive relation between the electric field and the conductivity to relate the induced electric field to the induced magnetic field. Specifically, we can use the following equation:
+
+E = σ * ∇φ
+
+where φ is the electric potential and σ is the electrical conductivity. This equation says that the electric field is proportional to the gradient of the electric potential, and that proportionality constant is the electrical conductivity.
+
+Using these equations, we can calculate the induced electric field due to the induced magnetic field:
+
+E_induced = σ * ∇φ_induced = σ * (-j * ω * B_induced) = σ * (-j * ω * B0 * sin(2πf*t))
+
+where j is the imaginary unit, ω is the angular frequency (2π times the frequency), B0 is the maximum amplitude of the induced magnetic field, and f is the frequency of the induced magnetic field.
+
+Next, we can model the changes in the applied fields due to the induced electric field. Specifically, we can use the principle of superposition to calculate the total magnetic field at any point in space:
+
+B_total = B_applied + B_induced
+
+where B_applied is the magnetic field due to the applied fields, and B_induced is the magnetic field due to the induced electric field.
+
+Assuming that the applied VLF and ELF fields are polarized in the x and y directions, respectively, we can calculate the changes in these fields due to the induced electric field:
+
+ΔBx = μ0 * ω * E_induced * cos(2πf_applied * t) * sin(θ) ΔBy = μ0 * ω * E_induced * sin(2πf_applied * t) * cos(θ)
+
+where μ0 is the vacuum permeability, f_applied is the frequency of the applied fields, and θ is the angle between the x and y polarizations and the direction of the induced magnetic field.
+
+These equations describe the changes in the applied fields due to the induced electric field, and can be used to design sensors that are sensitive to these changes. The signals detected by these sensors can then be demodulated and analyzed using signal processing techniques to extract information about the properties of the induced field and the brain tissue it passed through.
+
+
+Martin Seidel
+I need more advanced math
+
+Certainly! Here is an example of some more advanced mathematical equations that can be used in the modeling and analysis of the induced magnetic field in the brain:
+
+Maxwell's equations:
+Maxwell's equations describe the behavior of electric and magnetic fields in space and time. They are given by:
+
+∇•E = ρ/ε_0 ∇×E = -∂B/∂t
+
+∇•B = 0 ∇×B = μ_0(j+ε_0∂E/∂t)
+
+where E and B are the electric and magnetic fields, ρ is the electric charge density, j is the current density, ε_0 is the electric permittivity of free space, μ_0 is the magnetic permeability of free space, and ∂/∂t represents a partial derivative with respect to time.
+
+Wave equation:
+The wave equation describes the propagation of waves through space and time. It is given by:
+
+∇^2ψ - 1/c^2 ∂^2ψ/∂t^2 = 0
+
+where ψ is the wave function, c is the speed of the wave, and ∇^2 is the Laplacian operator.
+
+Superposition principle:
+The superposition principle states that the total electric and magnetic fields at any point in space is the sum of the fields due to each individual source. Mathematically, this is expressed as:
+
+E_total = ∑ E_i B_total = ∑ B_i
+
+where E_total and B_total are the total electric and magnetic fields at a point, and E_i and B_i are the electric and magnetic fields due to each individual source i.
+
+Constitutive relation:
+The constitutive relation describes the relationship between the electric field and the electrical conductivity of the tissue. It is given by:
+
+J = σE
+
+where J is the current density, σ is the electrical conductivity, and E is the electric field.
+
+These are just a few examples of the mathematical equations that can be used in the modeling and analysis of the induced magnetic field in the brain. Other techniques, such as Fourier analysis, statistical signal processing, and machine learning, may also be used to extract information from the data.
+
+4 / 4
+
+Martin Seidel
+Sure, here's an example of the math involved in modeling the interaction between the applied fields and the induced field: Let's assume that the applied VLF and ELF fields can be modeled as sinusoidal waves with frequencies of 10 kHz and 30 Hz, respectively, and a magnetic field strength of 100 nT. Let's also assume that the induced magnetic field can be modeled as a sinusoidal wave with a frequency of 2 Hz and a magnetic field strength of 1 pT. Using Maxwell's equations, we can relate the electric field and magnetic field to each other and to the electrical conductivity of the brain tissue. Specifically, we can use the following equation: ∇ × E = -∂B/∂t where E is the electric field, B is the magnetic field, and ∂/∂t represents the partial derivative with respect to time. This equation says that a changing magnetic field induces an electric field, and vice versa. Assuming that the brain tissue has a conductivity of 0.3 S/m, we can use the constitutive relation between the electric field and the conductivity to relate the induced electric field to the induced magnetic field. Specifically, we can use the following equation: E = σ * ∇φ where φ is the electric potential and σ is the electrical conductivity. This equation says that the electric field is proportional to the gradient of the electric potential, and that proportionality constant is the electrical conductivity. Using these equations, we can calculate the induced electric field due to the induced magnetic field: E_induced = σ * ∇φ_induced = σ * (-j * ω * B_induced) = σ * (-j * ω * B0 * sin(2πf*t)) where j is the imaginary unit, ω is the angular frequency (2π times the frequency), B0 is the maximum amplitude of the induced magnetic field, and f is the frequency of the induced magnetic field. Next, we can model the changes in the applied fields due to the induced electric field. Specifically, we can use the principle of superposition to calculate the total magnetic field at any point in space: B_total = B_applied + B_induced where B_applied is the magnetic field due to the applied fields, and B_induced is the magnetic field due to the induced electric field. Assuming that the applied VLF and ELF fields are polarized in the x and y directions, respectively, we can calculate the changes in these fields due to the induced electric field: ΔBx = μ0 * ω * E_induced * cos(2πf_applied * t) * sin(θ) ΔBy = μ0 * ω * E_induced * sin(2πf_applied * t) * cos(θ) where μ0 is the vacuum permeability, f_applied is the frequency of the applied fields, and θ is the angle between the x and y polarizations and the direction of the induced magnetic field. These equations describe the changes in the applied fields due to the induced electric field, and can be used to design sensors that are sensitive to these changes. The signals detected by these sensors can then be demodulated and analyzed using signal processing techniques to extract information about the properties of the induced field and the brain tissue it passed through. Need more advanced math and how the use of a second set or n number of vlf and elf frequencies can be used to get information about the induced magnetic or electric field
+
+To extend the model to include multiple sets of VLF and ELF frequencies, we can use a linear combination of the individual induced electric fields. Let's assume that we have n sets of VLF and ELF fields with frequencies and magnetic field strengths denoted by f_1, B_1, f_2, B_2, ..., f_n, B_n. The total induced magnetic field can be written as:
+
+B_induced = B_1sin(2πf_1t) + B_2sin(2πf_2t) + ... + B_nsin(2πf_nt)
+
+Using the equations from before, we can calculate the induced electric field for each of these frequencies:
+
+E_induced_1 = σ * (-j * ω_1 * B_1 * sin(2πf_1t)) E_induced_2 = σ * (-j * ω_2 * B_2 * sin(2πf_2t)) ... E_induced_n = σ * (-j * ω_n * B_n * sin(2πf_n*t))
+
+where ω_i = 2π*f_i is the angular frequency for the ith frequency.
+
+The total induced electric field is then given by the linear combination:
+
+E_induced_total = E_induced_1 + E_induced_2 + ... + E_induced_n
+
+Using this total induced electric field, we can calculate the changes in the applied fields as before:
+
+ΔBx = μ0 * ω * E_induced_total * cos(2πf_applied * t) * sin(θ) ΔBy = μ0 * ω * E_induced_total * sin(2πf_applied * t) * cos(θ)
+
+where ω = 2π*f_applied is the angular frequency of the applied fields.
+
+By measuring the changes in the applied fields at different sets of VLF and ELF frequencies, we can obtain information about the properties of the induced magnetic or electric field. For example, the amplitude and phase of the changes in the applied fields can provide information about the conductivity and permittivity of the brain tissue, which in turn can be used to infer information about the structure and function of the brain. The use of multiple frequencies can also help to reduce noise and improve the accuracy of the measurements. However, the analysis of these signals can be quite complex and may require advanced signal processing and mathematical techniques.
+
+__________
+
+IT STARTED A DIFFRENT WAY BUT WAS CUT OFF AND SABATOGED 
+
+
+Sure! Here's an example of a more advanced mathematical model that can be used to describe the interaction between the applied VLF and ELF fields and the induced magnetic field in the brain tissue:
+
+The electric and magnetic fields in a medium with electrical conductivity σ, permittivity ε, and magnetic permeability μ can be described by the wave equation:
+
+∇²E - με ∂²E/∂t² = σ ∂E/∂t
+
+∇²H - με ∂²H/∂t² = σ ∂H/∂t
+
+where E is the electric field, H is the magnetic field, and t is time. The Laplacian operator (∇²) describes the spatial variation of the fields, and the second partial derivative with respect to time (∂²/∂t²) describes the temporal variation.
+
+To model the interaction between the applied fields and the induced field, we can use the principle of superposition to add the fields due to each source. Let E_app and H_app be the electric and magnetic fields due to the applied VLF and ELF fields, respectively, and E_ind and H_ind be the electric and magnetic fields due to the induced field. Then the total fields can be written as:
+
+E_total = E_app + E_ind
+
+H_total = H_app + H_ind
+
+The induced field can be modeled as a sinusoidal electromagnetic wave with frequency f and magnetic field strength B_ind. Then the electric and magnetic fields due to the induced field can be written as:
+
+E_ind = -jωμ B_ind/σ exp(-jωt)
+
+H_ind = B_ind/μ exp(-jωt)
+
+where ω = 2πf is the angular frequency and j = √(-1) is the imaginary unit.
+
+The changes in the applied fields due to the induced field can be modeled as a modulation of the amplitude and phase of the fields. Let A_app and φ_app be the amplitude and phase of the applied fields, respectively, without the induced field, and ΔA_app and Δφ_app be the changes in the amplitude and phase due to the induced field. Then the modulated fields can be written as:
+
+A_mod = A_app + ΔA_app
+
+φ_mod = φ_app + Δφ_app
+
+The changes in the amplitude and phase can be related to the induced magnetic field strength B_ind and the tissue properties σ, ε, and μ using the constitutive relation:
+
+B_ind = μεω ΔA_app exp(jφ_app) / √(1 + (ωσε)²)
+
+This relation describes how the induced magnetic field strength depends on the changes in the applied fields and the tissue properties.
+
+To detect the changes in the applied fields, we can use antennas or
