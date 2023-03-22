@@ -1,0 +1,34 @@
+ertainly! Based on the previous discussion, we have determined that the required minimum ELF or VLF to cause an action potential in a neuron is approximately 5.12 Hz. We also calculated the required induced electric field to cause a change in the transmembrane potential of -55 mV, which is around 0.5 V/m.
+
+To better understand how the induced electric field affects the transmembrane potential, we can use the cable equation to model the spread of the electric field through the neuron. The cable equation describes how changes in membrane potential propagate along a one-dimensional cable, such as a neuron dendrite or axon. The equation is given by:
+
+dV/dt = Rm * Cm * d2V/dx2 - Ri * V + Ie
+
+where V is the transmembrane potential (in mV), t is time (in ms), x is the position along the cable (in cm), Rm is the membrane resistance (in Ωcm^2), Cm is the membrane capacitance (in µF/cm^2), Ri is the intracellular resistance (in Ωcm), and Ie is the current injected into the cable (in µA/cm^2).
+
+To apply the cable equation to our situation, we can assume a simplified model of the neuron as a one-dimensional cable with uniform properties. We can also assume that the induced electric field is a uniform, time-varying field that affects the entire length of the cable. In this case, the injected current (Ie) is proportional to the induced electric field (E) and the cable's cross-sectional area (A):
+
+Ie = σ * A * E
+
+where σ is the specific conductivity of the neuron's cytoplasm (in S/cm).
+
+Substituting this equation into the cable equation gives:
+
+dV/dt = Rm * Cm * d2V/dx2 - Ri * V + σ * A * E
+
+We can then use the method of separation of variables to solve this partial differential equation. Assuming a sinusoidal electric field with amplitude E0 and frequency f, we can write:
+
+E = E0 * sin(2π * f * t)
+
+and substitute into the equation. Separating the variables and solving the resulting ordinary differential equation gives:
+
+V(x,t) = ∑n=1^∞ An * exp(-λn * x) * sin(2π * f * t - φn)
+
+where λn is the n-th eigenvalue of the cable equation, An and φn are the corresponding coefficients, and the sum is taken over all values of n.
+
+The eigenvalues can be calculated using the Muler and Markin method, which approximates the cable as a series of cylindrical segments. The method involves solving the cable equation for each segment and then matching the solutions at the segment boundaries. The resulting eigenvalues depend on the segment lengths and diameters and the cable's electrical properties.
+
+Once the eigenvalues have been calculated, we can use them to determine the spread of the electric field through the neuron and its effect on the transmembrane potential. In general, the induced electric field will be strongest near the point of stimulation and will decay rapidly as it spreads through the cable. The transmembrane potential will also exhibit a similar pattern, with the highest amplitude near the point of stimulation and smaller amplitudes farther away.
+
+To summarize, we can use the cable equation and the Muler and Markin method to model the spread of the induced electric field through a neuron and its effect on the transmembrane potential. The cable equation describes how the transmembrane potential changes over time and space, while the Muler and Markin method provides the eigenvalues that determine how the electric field spreads
+
