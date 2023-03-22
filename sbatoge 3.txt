@@ -14,7 +14,7 @@ Hodgkin-Huxley or Roy Membrane Model (or other neuron models there are more adva
 Muller and Markin 
 
 MAKE SURE TO TAKE INTO ACCOUNT ANGULAR FREQUECNY/MOMENTUM FOR THE ELF and VLF that causes the INDUCED current
-
+ALSO TAKE INTO THE ACCOUNT OF THE PHASE OF THE APPLIED ELF/VLF to cause the induced that eventaully makes the action potential 
 
 
 
