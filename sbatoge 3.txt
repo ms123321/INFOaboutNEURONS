@@ -1,0 +1,219 @@
+
+Use an emf flux in the VLF and ELF range to cause an induction current in the neuron that causes an action potential
+(redo for nerve fiber -such as one connecting a muscle has diffrent properties)
+
+Maxwell's equations
+Faraday's law to calculate the induced electric field
+Into 
+
+Nersnt equation(use all ions Cl, Na and K )  and cable equation (nerve cable equation) 
+(see if IEMF = g(EN - Vm) -- is relevant ??) 
+
+IEMF = g(EN - Vm)
+Hodgkin-Huxley or Roy Membrane Model (or other neuron models there are more advanced) 
+Muller and Markin 
+
+MAKE SURE TO TAKE INTO ACCOUNT ANGULAR FREQUECNY/MOMENTUM FOR THE ELF and VLF that causes the INDUCED current
+
+
+
+
+Sure! Here's how the equations plug into each other to model the effect of an induced EMF on a nerve fiber:
+
+Faraday's law of electromagnetic induction relates the induced electric field to the rate of change of the magnetic flux density:
+E = -dΦ/dt
+
+Where E is the induced electric field, Φ is the magnetic flux, and t is time.
+
+Assuming a uniform magnetic field B and a nerve fiber with cross-sectional area A, the induced EMF can be calculated as follows:
+Iemf = -A*dB/dt
+
+Where Iemf is the induced EMF.
+
+The extracellular current density can be modeled as a current source in the cable equation:
+Ie(x,t) = Iemf(x,t)/πa^2
+
+Where Ie(x,t) is the extracellular current density at position x and time t, a is the radius of the nerve fiber, and Iemf(x,t) is the induced EMF.
+
+The cable equation describes the propagation of the electrical signal along the nerve fiber:
+dV/dt = (1/Cm)[d/dx][Rm(x)dV/dx] + (1/RmCm)*Ie(x,t)
+
+Where V is the transmembrane potential, t is time, x is the distance along the nerve fiber, Cm is the membrane capacitance, Rm(x) is the membrane resistance, and Ie(x,t) is the extracellular current density at position x and time t.
+
+The Nernst equation relates the equilibrium potential of an ion across the cell membrane to the concentrations of the ion inside and outside the cell:
+Eion = (RT/zF)*ln([ion]out/[ion]in)
+
+Where Eion is the equilibrium potential for the ion, R is the universal gas constant, T is the absolute temperature, z is the valence of the ion, F is Faraday's constant, [ion]out is the concentration of the ion outside the cell, and [ion]in is the concentration of the ion inside the cell.
+
+The transmembrane potential V can be calculated using the Hodgkin-Huxley model or other neuron models:
+CmdV/dt = -gNam^3h(V - ENa) - gKn^4(V - EK) - gL*(V - EL) + Istim
+
+Where Cm is the membrane capacitance, gNa, gK, and gL are the conductances of the sodium, potassium, and leakage channels, m, h, and n are gating variables that describe the activation and inactivation of the channels, ENa, EK, and EL are the equilibrium potentials for sodium, potassium, and leakage channels, and Istim is the applied stimulus current.
+
+The concentrations of multiple ions can be modeled using the Goldman-Hodgkin-Katz equation:
+Vm = (RT/F)*ln((PNa[Na+]out + PK[K+]out + PCl[Cl-]in)/(PNa[Na+]in + PK[K+]in + PCl[Cl-]out))
+
+Where Vm is the membrane potential, R is the universal gas constant, T is the absolute temperature, F is Faraday's constant, PNa, PK, and PCl are the permeabilities of the membrane to sodium, potassium, and chloride ions, [Na+]out, [K+]out, and [Cl-]out are the concentrations of the ions outside the cell, and [Na+]in, [K+]in, and [Cl-]in are the concentrations of the ions inside the cell.
+
+
+________________________
+
+Sure! Let's start by considering the induced EMF, which is given by Faraday's law:
+
+Iemf(x,t) = -A*dB/dt
+
+where Iemf(x,t) is the induced EMF, A is the cross-sectional area of the nerve fiber, and dB/dt is the time derivative of the magnetic flux density. Assuming a uniform magnetic field B, we can simplify this expression to:
+
+Iemf(x,t) = -AB(d/dt)cos(ωt)
+
+where ω is the angular frequency of the EMF.
+
+Next, we can use the cable equation to describe the propagation of the electrical signal along the nerve fiber. The cable equation relates the transmembrane potential V to the extracellular current density Ie(x,t) and the properties of the neuron:
+
+dV/dt = (1/Cm)[d/dx][Rm(x)dV/dx] + (1/RmCm)*Ie(x,t)
+
+where Cm is the membrane capacitance, Rm(x) is the membrane resistance, and Ie(x,t) is the extracellular current density at position x and time t.
+
+To model the extracellular current density, we can assume that the induced EMF is acting as a current source, such that:
+
+Ie(x,t) = Iemf(x,t)/πa^2
+
+where a is the radius of the nerve fiber.
+
+Now we can combine the equations for the induced EMF and the extracellular current density to get:
+
+Ie(x,t) = (-AB/πa^2)(d/dt)cos(ωt)
+
+Finally, we can use the Nernst equation and the Hodgkin-Huxley model to simulate the effect of the induced current on the neuron. The Nernst equation relates the equilibrium potential of an ion to its concentration gradient across the cell membrane, while the Hodgkin-Huxley model describes the dynamics of the transmembrane currents involved in action potential generation.
+
+The Nernst equation for each ion can be written as:
+
+Eion = RT/zF * ln([ion]out/[ion]in)
+
+where Eion is the equilibrium potential for the ion, R is the universal gas constant, T is the absolute temperature, z is the valence of the ion, F is Faraday's constant, [ion]out is the concentration of the ion outside the cell, and [ion]in is the concentration of the ion inside the cell.
+
+Using the Nernst equation, we can calculate the equilibrium potentials for sodium (ENa), potassium (EK), and chloride (ECl) based on their concentrations inside and outside the neuron.
+
+Next, we can use the Hodgkin-Huxley model to simulate the effect of the induced current on the neuron. The Hodgkin-Huxley model describes the dynamics of the transmembrane currents involved in action potential generation, and it can be written as:
+
+CmdV/dt = -gNam^3h(V - ENa) - gKn^4(V - EK) - gL*(V - EL) + Istim
+
+where Cm is the membrane capacitance, V is the transmembrane potential, gNa, gK, and gL are the conductances of the sodium, potassium, and leakage channels, m, h, and n are gating variables that describe the activation and inactivation of the channels, ENa, EK, and EL are the equilibrium potentials for sodium, potassium, and leakage channels, and Istim is the applied stimulus current.
+
+The conductances of the sodium and potassium channels depend on the transmembrane potential, as well as the gating variables m, h, and
+
+The cable equation and the Hodg
+
+
+__________________________________
+
+Use an emf flux in the VLF and ELF range to cause an induction current in the neuron that causes an action potential
+(redo for nerve fiber -such as one connecting a muscle has diffrent properties)
+
+Maxwell's equations
+Faraday's law to calculate the induced electric field
+Into 
+
+Nersnt equation(use all ions Cl, Na and K )  and cable equation (nerve cable equation) 
+(see if IEMF = g(EN - Vm) -- is relevant ??) 
+
+IEMF = g(EN - Vm)
+Hodgkin-Huxley or Roy Membrane Model (or other neuron models there are more advanced) 
+Muller and Markin 
+
+Use the equations
+
+To cause an induction current in a nerve fiber, we need to apply an electromagnetic field (EMF) flux in the very low frequency (VLF) and extremely low frequency (ELF) range. The induced electric field can be calculated using Faraday's law of electromagnetic induction, which states that the induced electric field is proportional to the rate of change of the magnetic flux density.
+
+Once we have the induced electric field, we can use the Nernst equation and cable equation to calculate the effect of the induced current on the neuron. The Nernst equation describes the equilibrium potential of an ion across the cell membrane, and the cable equation describes the propagation of the electrical signal along the nerve fiber.
+
+The induced EMF can be modeled as a current source in the cable equation, and the Nernst equation can be used to calculate the ionic concentrations inside and outside the neuron. The Hodgkin-Huxley model or other more advanced neuron models, such as the Muller and Markin model, can then be used to simulate the effect of the induced current on the neuron.
+
+It's important to note that nerve fibers connecting muscles have different properties compared to other types of nerve fibers, and therefore may require different modeling approaches. The IEMF = g(EN - Vm) equation may be relevant in some cases, but the specific modeling approach would depend on the characteristics of the nerve fiber and the induced EMF.
+
+
+
+
+Martin Seidel
+Show full math and use all ions for the nersnt equation
+The Nernst equation relates the equilibrium potential of an ion across the cell membrane to the concentrations of the ion inside and outside the cell. For a neuron, we need to consider the concentrations of multiple ions, including sodium (Na+), potassium (K+), and chloride (Cl-).
+
+The Nernst equation for each ion can be expressed as follows:
+
+For Na+:
+
+E(Na+) = RT/zF * ln([Na+]out/[Na+]in)
+
+For K+:
+
+E(K+) = RT/zF * ln([K+]out/[K+]in)
+
+For Cl-:
+
+E(Cl-) = RT/zF * ln([Cl-]in/[Cl-]out)
+
+Where E is the equilibrium potential, R is the universal gas constant, T is the absolute temperature, z is the valence of the ion (i.e., the number of charges carried by the ion), F is Faraday's constant, [ion]out is the concentration of the ion outside the cell, and [ion]in is the concentration of the ion inside the cell.
+
+The cable equation describes the propagation of the electrical signal along a nerve fiber, and it can be expressed as follows:
+
+dV/dt = (1/Cm)[d/dx][Rm(x)dV/dx] + (1/RmCm)*Ie(x,t)
+
+Where V is the transmembrane potential, t is time, x is the distance along the nerve fiber, Cm is the membrane capacitance, Rm(x) is the membrane resistance, and Ie(x,t) is the extracellular current density at position x and time t.
+
+The extracellular current density can be modeled as a current source, which can be expressed as follows:
+
+Ie(x,t) = Iemf(x,t)/πa^2
+
+Where a is the radius of the nerve fiber, and Iemf(x,t) is the induced EMF.
+
+The induced EMF can be calculated using Faraday's law of electromagnetic induction, which relates the induced electric field to the rate of change of the magnetic flux density. Assuming a uniform magnetic field B and a nerve fiber with cross-sectional area A, the induced EMF can be expressed as follows:
+
+Iemf(x,t) = -A*dB/dt
+
+Finally, we can use the Hodgkin-Huxley model or other neuron models to simulate the effect of the induced current on the neuron. The Hodgkin-Huxley model describes the dynamics of the transmembrane currents involved in the generation of action potentials, and it can be expressed as follows:
+
+CmdV/dt = -gNam^3h(V - ENa) - gKn^4(V - EK) - gL*(V - EL) + Istim
+
+Where Cm is the membrane capacitance, V is the transmembrane potential, gNa, gK, and gL are the conductances of the sodium, potassium, and leakage channels, m, h, and n are gating variables that describe the activation and inactivation of the channels, ENa, EK, and EL are the equilibrium potentials for sodium, potassium, and leakage channels, and Istim is the applied stimulus current.
+
+Overall, these equations can be used to model the effect of an induced EMF on a nerve fiber, taking into account the concentrations of multiple ions, the propagation of the electrical signal along the fiber, and the dynamics of the transmembrane currents involved in action potential generation.
+
+
+
+
+Martin Seidel
+Show the full math and how the equations plug into each other
+To model the effect of an induced EMF on a nerve fiber, we can use the following equations:
+
+The Nernst equation for each ion:
+E(Na+) = RT/zF * ln([Na+]out/[Na+]in)
+E(K+) = RT/zF * ln([K+]out/[K+]in)
+E(Cl-) = RT/zF * ln([Cl-]in/[Cl-]out)
+
+where E is the equilibrium potential, R is the universal gas constant, T is the absolute temperature, z is the valence of the ion, F is Faraday's constant, [ion]out is the concentration of the ion outside the cell, and [ion]in is the concentration of the ion inside the cell.
+
+The cable equation:
+dV/dt = (1/Cm)[d/dx][Rm(x)dV/dx] + (1/RmCm)*Ie(x,t)
+
+where V is the transmembrane potential, t is time, x is the distance along the nerve fiber, Cm is the membrane capacitance, Rm(x) is the membrane resistance, and Ie(x,t) is the extracellular current density at position x and time t.
+
+The extracellular current density:
+Ie(x,t) = Iemf(x,t)/πa^2
+
+where a is the radius of the nerve fiber, and Iemf(x,t) is the induced EMF.
+
+The induced EMF:
+Iemf(x,t) = -A*dB/dt
+
+where A is the cross-sectional area of the nerve fiber, and dB/dt is the rate of change of the magnetic flux density.
+
+The Hodgkin-Huxley model:
+CmdV/dt = -gNam^3h(V - ENa) - gKn^4(V - EK) - gL*(V - EL) + Istim
+
+where Cm is the membrane capacitance, V is the transmembrane potential, gNa, gK, and gL are the conductances of the sodium, potassium, and leakage channels, m, h, and n are gating variables that describe the activation and inactivation of the channels, ENa, EK, and EL are the equilibrium potentials for sodium, potassium, and leakage channels, and Istim is the applied stimulus current.
+
+To model the effect of the induced EMF on the nerve fiber, we can first calculate the induced EMF using equation 4, and then calculate the extracellular current density using equation 3. We can then use the cable equation (equation 2) to calculate the transmembrane potential along the nerve fiber as a function of time and position, taking into account the extracellular current density.
+
+Once we have the transmembrane potential, we can use the Hodgkin-Huxley model (equation 5) to simulate the effect of the induced current on the ion channels, and hence the generation of action potentials. The Nernst equation (equations 1) can be used to calculate the equilibrium potentials for each ion, which are used in the Hodgkin-Huxley model to determine the ionic currents.
+
+Overall, the equations can be used together to model the effect of an induced EMF on a nerve fiber, taking into account the concentrations of multiple ions, the propagation of the electrical signal along the fiber, and the dynamics of the transmembrane currents involved in action potential generation.
