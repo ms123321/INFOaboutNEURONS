@@ -1,0 +1,31 @@
+How its done
+
+1. emf flux on the neuron/nerve to cause an induced current in the nerve that causes a polorization event that leads to the action potential threshold. 
+
+(either tracks all the nerves , or tracks the major nerves and modulates the magnitude /phase and frequency of action potentials (all nerves connected to spine and motor cortex ) so either pulses at correct amplitudes and magnitudes somewhere on the path - we think its close to the neuromuscular junctions , it could be downstream anywhere from the motor cortex - even the spine - would have to redo the math - take note 
+
+2.emf flux on the body of the muscle to overwhelm the muscle with emf flux - uses math similair to Neuromuscular Electrical Stimulation or similair method. Math not done on this page 
+
+
+
+Find the book --
+
+ Bioelectromagnetism
+
+Principles and Applications
+
+of Bioelectric
+and Biomagnetic Fields
+
+Ask chat gpt to go over the math for you if you strugle -ask chatgpt to help you understand the equations or concepts 
+Find the other math too.
+
+(it is old , find the updated versions of this book or similair , find the diffrential equations that govern the nervous system - ie the ones that govern the nerves or the models of the neuron. 
+
+Find the diffrential equations that relate action potentials to motor neuron recruitment , find the diffrential equations that relate the motor neuron recruitment or/and action potentials to force applied by the muscle. relate these to correct force of contraction equations - relate to the correct angles 
+
+for brain - can try to model brain - need to do custum integral over the regions of the brain affected for maxwells equations for the induction current (need the correct integral over the correct region of the brain to calculate induced electric field/magnetic field) - the tech can do the custom integral to get the custom shape of the region or the cortical columns?? we havent figured all of that out yet. we are working on it - check this github for updates or get in contact with martin somehow.
+
+
+Twitter handle is @MartinS67861003
+https://twitter.com/MartinS67861003
