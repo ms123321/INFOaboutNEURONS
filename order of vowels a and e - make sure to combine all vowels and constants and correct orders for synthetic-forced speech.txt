@@ -1,0 +1,43 @@
+Show me all the order of nerve firing and the order of muscle movement for articulation and phonation for the vowels 
+——————————————-
+
+Articulation and phonation of vowels require the coordinated activity of several muscles in the vocal tract, including those in the larynx, pharynx, tongue, lips, and jaw. The following is a simplified overview of the order of nerve firing and muscle movement involved in vowel production:
+
+The brain sends a signal to the motor neurons that control the muscles of the larynx, causing the vocal folds to adduct (come together) to create a closed glottis.
+Air pressure builds up below the closed glottis, causing the vocal folds to vibrate and produce sound.
+The brain sends a signal to the motor neurons that control the muscles of the pharynx, tongue, and lips to shape the vocal tract into the appropriate configuration for the specific vowel being produced. The specific configuration will depend on the specific vowel being produced.
+The pharyngeal constrictor muscles contract, narrowing the pharynx and raising the larynx to create a higher pitch.
+The tongue moves to the appropriate position in the mouth to shape the oral cavity for the specific vowel being produced. For example, for the vowel /i/, the tongue moves to the front of the mouth and is raised towards the hard palate, creating a small oral cavity and high frequency resonance.
+The lips are positioned to shape the opening of the oral cavity. For example, for the vowel /u/, the lips are rounded and protruded.
+The brain sends a signal to the motor neurons that control the muscles of the diaphragm and chest wall, causing them to contract and expand to control the airflow for the duration of the vowel.
+As the vowel sound is produced, the brain continues to adjust the movement of the vocal tract muscles to maintain the appropriate configuration for the vowel.
+It is important to note that the above description is a simplified overview, and the exact muscle movements and nerve firings involved in vowel production can vary depending on factors such as the individual's anatomy and the specific speech context.
+
+
+
+————————————————————
+
+
+Show the most advanced order for all the vowels . Start with a and end with y . Show the order of nerves that activate to move the muscles and also list the correct muscles . 
+
+Show most in depth for each
+
+——————
+
+
+The production of each vowel involves a complex interplay between the nerves and muscles of the vocal tract. Here is a detailed description of the most advanced order for each vowel, including the nerves and muscles involved:
+
+/a/ (as in "father")
+The brain sends a signal to the motor neurons that control the muscles of the larynx, causing the vocal folds to adduct (come together) to create a closed glottis. This is controlled by the recurrent laryngeal nerve.
+The brain also sends a signal to the motor neurons that control the muscles of the diaphragm and chest wall, causing them to contract and expand to control the airflow for the duration of the vowel. This is controlled by the phrenic nerve.
+The tongue is lowered and retracted, with the back of the tongue raised towards the soft palate. The tongue movement is controlled by the hypoglossal nerve and the genioglossus muscle.
+The pharyngeal constrictor muscles contract, narrowing the pharynx and raising the larynx to create a higher pitch. This is controlled by the vagus nerve.
+The lips are relaxed and slightly apart.
+/e/ (as in "bed")
+The brain sends a signal to the motor neurons that control the muscles of the larynx, causing the vocal folds to adduct to create a closed glottis. This is controlled by the recurrent laryngeal nerve.
+The brain also sends a signal to the motor neurons that control the muscles of the diaphragm and chest wall, causing them to contract and expand to control the airflow for the duration of the vowel. This is controlled by the phrenic nerve.
+The tongue is raised towards the hard palate and moved slightly forward. The tongue movement is controlled by the hypoglossal nerve and the genioglossus muscle.
+The pharyngeal constrictor muscles contract, narrowing the pharynx and raising the larynx to create a higher pitch. This is controlled by the vagus nerve.
+The lips are relaxed and slightly apart.
+
+Sent from my iPhone
